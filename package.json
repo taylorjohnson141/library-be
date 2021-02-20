@@ -9,8 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "knex": "^0.21.17",
+    "pg": "^8.5.1",
     "postgres": "^1.0.2"
   }
 }
