@@ -4,6 +4,7 @@ const app = express()
 
 
 let knex = require('./connection')// multer for uploading images
+let axios = require('axios')
 const port = process.env.PORT || 9000
 
 var cors = require('cors')
@@ -32,6 +33,8 @@ app.post('/addBook',(request,response) =>{
        .catch(error =>{
          return response.send({text:error})
       })
-   
+})
+app.post('/search', (request,response) =>{
+  axios.get(url[, config])
 
 })
