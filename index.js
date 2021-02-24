@@ -35,6 +35,8 @@ app.post('/addBook',(request,response) =>{
       })
 })
 app.post('/search', (request,response) =>{
-  axios.get(url[, config])
-
+  return axios.get(`https://books.googleapis.com/books/v1/volumes?key=${process.env.key}q=island`)
+  .then(list =>{
+    console.log(list)
+  })
 })
