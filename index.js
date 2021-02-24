@@ -1,4 +1,3 @@
-const { response } = require('express')
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
@@ -6,12 +5,14 @@ const app = express()
 
 let knex = require('./connection')// multer for uploading images
 const port = process.env.PORT || 9000
+
 var cors = require('cors')
 app.use(cors())
 app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(bodyParser.json());
+
 app.listen(port, () => console.log(`listening on port: ${port}`))
 
 app.get('/books',async (request,response) =>{
